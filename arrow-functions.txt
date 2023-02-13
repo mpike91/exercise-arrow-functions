@@ -1,0 +1,12 @@
+ES2015 Arrow Functions Shorthand:
+const double = arr => arr.map(val => val * 2);
+
+Refactor:
+const squareAndFindEvens = numbers => ({
+  let squares = numbers.map(num => num ** 2);
+  let evens = squares.filter(square => square % 2 === 0);
+  return evens;
+})
+
+Refactor on ONE LINE:
+const squareAndFindEvens = numbers => numbers.map(num => num ** 2).filter(square => square % 2 === 0);
